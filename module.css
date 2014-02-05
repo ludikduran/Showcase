@@ -1,0 +1,39 @@
+.LD2_Showcase
+{
+}
+
+.LD2_Logo
+{
+	float: left;
+}
+
+.LD2_Logo img
+{
+	width: 145px;
+	height: 145px;
+}
+
+.LD2_TD
+{
+	margin: 0px 15px;
+	float: left;
+	width: 33%;
+}
+
+.LD2_Title
+{
+	margin-bottom: 15px;
+    text-align: center;
+    font-size: large;
+}
+
+.LD2_Description
+{
+    text-align: justify;
+}
+
+.LD2_Screenshot img
+{
+    width: 145px;
+    height: 145px;
+}

@@ -15,7 +15,7 @@
       <dependencies>
         <dependency type="CoreVersion">07.00.02</dependency>
       </dependencies>
-      
+
       <components>
         <component type="Script">
           <scripts>
@@ -46,7 +46,7 @@
           <desktopModule>
             <moduleName>Showcase</moduleName>
             <foldername>Showcase</foldername>
-            <businessControllerClass>DotNetNuke.Modules.Showcase.Components.FeatureController</businessControllerClass>
+            <businessControllerClass>LD2.Showcase.Components.FeatureController</businessControllerClass>
             <supportedFeatures />
             <moduleDefinitions>
               <moduleDefinition>
@@ -64,21 +64,10 @@
                     <viewOrder>0</viewOrder>
                   </moduleControl>
                   <moduleControl>
-                    <controlKey>Edit</controlKey>
-                    <controlSrc>DesktopModules/Showcase/Edit.ascx</controlSrc>
+                    <controlKey>Add</controlKey>
+                    <controlSrc>DesktopModules/Showcase/Add.ascx</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
-                    <controlTitle>Edit Content</controlTitle>
-                    <controlType>Edit</controlType>
-                    <iconFile />
-                    <helpUrl />
-                    <viewOrder>0</viewOrder>
-                    <supportsPopUps>True</supportsPopUps>
-                  </moduleControl>
-                  <moduleControl>
-                    <controlKey>Settings</controlKey>
-                    <controlSrc>DesktopModules/Showcase/Settings.ascx</controlSrc>
-                    <supportsPartialRendering>False</supportsPartialRendering>
-                    <controlTitle>Showcase Settings</controlTitle>
+                    <controlTitle>Add Item</controlTitle>
                     <controlType>Edit</controlType>
                     <iconFile />
                     <helpUrl />
@@ -93,7 +82,7 @@
           <assemblies>
             <basePath>bin</basePath>
             <assembly>
-              <name>Showcase.dll</name>
+              <name>LD2.Showcase.dll</name>
             </assembly>
           </assemblies>
         </component>

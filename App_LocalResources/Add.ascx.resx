@@ -121,33 +121,21 @@
     <value>Cancel</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="ControlTitle_edit.Text" xml:space="preserve">
-    <value>Edit Control for Showcase</value>
-  </data>
-  <data name="lblAssignedUser.Help" xml:space="preserve">
-    <value>Choose a user to assign this object to.</value>
-  </data>
-  <data name="lblAssignedUser.Text" xml:space="preserve">
-    <value>Assigned User</value>
-  </data>
-  <data name="lblDescription.Help" xml:space="preserve">
-    <value>Enter a Description for your Item</value>
+    <value>Submit</value>
   </data>
   <data name="lblDescription.Text" xml:space="preserve">
     <value>Description</value>
   </data>
-  <data name="lblName.Help" xml:space="preserve">
-    <value>Enter the Name for your Item</value>
+  <data name="lblLink.Text" xml:space="preserve">
+    <value>Link</value>
   </data>
-  <data name="lblName.Text" xml:space="preserve">
-    <value>Name</value>
+  <data name="lblLogo.Text" xml:space="preserve">
+    <value>Logo</value>
   </data>
-  <data name="BasicSettings.Text" xml:space="preserve">
-    <value>Showcase Item Basic Settings</value>
+  <data name="lblScreenshot.Text" xml:space="preserve">
+    <value>Screenshot</value>
   </data>
-  <data name="ExpandAll.Text" xml:space="preserve">
-    <value>Expand All</value>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>Title</value>
   </data>
 </root>

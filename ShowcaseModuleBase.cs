@@ -17,6 +17,15 @@ namespace LD2.Showcase
 {
     public class ShowcaseModuleBase : PortalModuleBase
     {
-        
+        public int ItemId
+        {
+            get
+            {
+                var qs = Request.QueryString["itmid"];
+                if (qs != null)
+                    return Convert.ToInt32(qs);
+                return -1;
+            }
+        }
     }
 }
