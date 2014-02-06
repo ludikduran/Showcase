@@ -11,6 +11,7 @@
 {
 	width: 145px;
 	height: 145px;
+    margin-top: 21px;
 }
 
 .LD2_TD
@@ -36,4 +37,11 @@
 {
     width: 145px;
     height: 145px;
+    margin-top: 21px;
+}
+
+.LD2_Showcase_pnlControls
+{
+    margin-top: 10px;
+    margin-bottom: 50px;
 }

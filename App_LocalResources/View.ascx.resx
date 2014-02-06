@@ -121,4 +121,16 @@
     <value>Add Item</value>
     <comment>Adds Item</comment>
   </data>
+  <data name="ConfirmDelete.Text" xml:space="preserve">
+    <value>Are you sure you want to delete this item?</value>
+    <comment>Confirms the delete action</comment>
+  </data>
+  <data name="lnkDelete.Text" xml:space="preserve">
+    <value>[Delete]</value>
+    <comment>Deletes the Item</comment>
+  </data>
+  <data name="lnkEdit.Text" xml:space="preserve">
+    <value>[Edit]</value>
+    <comment>Edits the Item</comment>
+  </data>
 </root>

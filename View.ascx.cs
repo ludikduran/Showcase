@@ -16,8 +16,6 @@ namespace LD2.Showcase
 {
     public partial class View : ShowcaseModuleBase
     {
-        IEnumerable<Item> items;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -42,7 +40,7 @@ namespace LD2.Showcase
 
         private void FillRepeater()
         {
-            items = new ItemController().GetItems();
+            IEnumerable<Item> items = new ItemController().GetItems();
             rptContent.DataSource = items;
             rptContent.DataBind();
         }
@@ -54,6 +52,38 @@ namespace LD2.Showcase
             Item dataitem = (Item) e.Item.DataItem;
             imgLogo.ImageUrl = FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.LogoID));
             imgSS.ImageUrl = FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.ScreenshotID));
+
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                var lnkEdit = e.Item.FindControl("lnkEdit") as HyperLink;
+                var lnkDelete = e.Item.FindControl("lnkDelete") as LinkButton;
+                var pnlControls = e.Item.FindControl("pnlControls") as Panel;
+
+                Item t = (Item) e.Item.DataItem;
+
+                if (IsEditable)
+                {
+                    pnlControls.Visible = true;
+                    lnkDelete.CommandArgument = t.Itm.ToString();
+                    lnkEdit.NavigateUrl = EditUrl(string.Empty, string.Empty, "Add", "itmid=" + t.Itm);
+                    ClientAPI.AddButtonConfirm(lnkDelete, Localization.GetString("ConfirmDelete", LocalResourceFile));
+                }
+            }
+        }
+
+        protected void rptContent_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "Edit")
+            {
+                Response.Redirect(EditUrl(string.Empty, string.Empty, "Add", "itmid" + e.CommandArgument));
+            }
+
+            if (e.CommandName == "Delete")
+            {
+                var tc = new ItemController();
+                tc.DeleteItem(Convert.ToInt32(e.CommandArgument));
+            }
+            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL());
         }
     }
 }

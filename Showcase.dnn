@@ -1,14 +1,14 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="Showcase" type="Module" version="00.00.01">
+    <package name="Showcase" type="Module" version="00.00.02">
       <friendlyName>Showcase</friendlyName>
-      <description>Christoc.com Showcase module</description>
+      <description>LD2.Showcase module</description>
       <iconFile>Images/icon_extensions.gif</iconFile>
       <owner>
-        <name>Christoc.com</name>
-        <organization>Christoc.com</organization>
-        <url>http://www.christoc.com</url>
-        <email>modules@christoc.com</email>
+        <name>LD{squared}</name>
+        <organization>LD{squared}</organization>
+        <url>http://ld2.ca</url>
+        <email>help@ld2.ca</email>
       </owner>
       <license src="License.txt"></license>
       <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
@@ -24,6 +24,11 @@
               <path>Providers\DataProviders\SqlDataProvider</path>
               <name>00.00.01.SqlDataProvider</name>
               <version>00.00.01</version>
+            </script>
+            <script type="Install">
+              <path>Providers\DataProviders\SqlDataProvider</path>
+              <name>00.00.02.SqlDataProvider</name>
+              <version>00.00.02</version>
             </script>
             <script type="UnInstall">
               <path>Providers\DataProviders\SqlDataProvider</path>
@@ -72,6 +77,7 @@
                     <iconFile />
                     <helpUrl />
                     <viewOrder>0</viewOrder>
+                    <supportsPopUps>True</supportsPopUps>
                   </moduleControl>
                 </moduleControls>
               </moduleDefinition>

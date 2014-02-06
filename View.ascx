@@ -4,7 +4,7 @@
     <asp:HyperLink ID="LnkAdd" runat="server" resourceKey="BtnAdd" CssClass="dnnTertiaryAction" />
 </asp:Panel>
 
-<asp:Repeater ID="rptContent" runat="server" OnItemDataBound="rptContent_ItemDataBound">
+<asp:Repeater ID="rptContent" runat="server" OnItemDataBound="rptContent_ItemDataBound" OnItemCommand="rptContent_ItemCommand">
     <ItemTemplate>
         <div class="LD2_Showcase">
             <!-- Logo -->
@@ -30,6 +30,11 @@
             </div>
         </div>
         
-        <div style="margin-bottom: 50px;"></div>
+        <div class="LD2_Showcase_pnlControls">
+            <asp:Panel ID="pnlControls" runat="server" Visible="false">
+                <asp:HyperLink ID="lnkEdit" runat="server" ResourceKey="lnkEdit.Text"/>
+                <asp:LinkButton ID="lnkDelete" runat="server" CommandName="Delete" ResourceKey="lnkDelete.Text"/>
+            </asp:Panel>
+        </div>
     </ItemTemplate>
 </asp:Repeater>
