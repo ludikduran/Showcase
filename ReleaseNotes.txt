@@ -1,4 +1,10 @@
-﻿00.00.02
+﻿00.00.03
+
+Features
+- Added link to screenshot area for full size image.
+
+
+00.00.02
 
 Features
 - Added item controls for edit and delete.

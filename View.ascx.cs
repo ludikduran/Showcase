@@ -49,9 +49,16 @@ namespace LD2.Showcase
         {
             var imgLogo = e.Item.FindControl("imgLogo") as Image;
             var imgSS = e.Item.FindControl("imgScreenShot") as Image;
+            var lnkSS = e.Item.FindControl("lnkScreenshot") as HyperLink;
             Item dataitem = (Item) e.Item.DataItem;
-            imgLogo.ImageUrl = FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.LogoID));
-            imgSS.ImageUrl = FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.ScreenshotID));
+            imgLogo.ImageUrl = FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.LogoID));      // Logo image
+            imgSS.ImageUrl = FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.ScreenshotID));  // Screenshot image
+
+            // Screenshot HyperLink
+            int height = FileManager.Instance.GetFile(dataitem.ScreenshotID).Height;
+            int width = FileManager.Instance.GetFile(dataitem.ScreenshotID).Width;
+            string SSUrl = (Request.IsSecureConnection ? "https://" : "http://") + base.PortalAlias.HTTPAlias.ToString() + FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.ScreenshotID));
+            lnkSS.NavigateUrl = UrlUtils.PopUpUrl(SSUrl, Control, PortalSettings, false, false, height + 20, width + 20, false, string.Empty);
 
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {

@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="Showcase" type="Module" version="00.00.02">
+    <package name="Showcase" type="Module" version="00.00.03">
       <friendlyName>Showcase</friendlyName>
       <description>LD2.Showcase module</description>
       <iconFile>Images/icon_extensions.gif</iconFile>
@@ -29,6 +29,11 @@
               <path>Providers\DataProviders\SqlDataProvider</path>
               <name>00.00.02.SqlDataProvider</name>
               <version>00.00.02</version>
+            </script>
+            <script type="Install">
+              <path>Providers\DataProviders\SqlDataProvider</path>
+              <name>00.00.03.SqlDataProvider</name>
+              <version>00.00.03</version>
             </script>
             <script type="UnInstall">
               <path>Providers\DataProviders\SqlDataProvider</path>

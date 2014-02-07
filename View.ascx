@@ -26,7 +26,9 @@
 
             <!-- Screenshot -->
             <div class="LD2_Screenshot">
-                <asp:Image ID="imgScreenshot" runat="server" />
+                <asp:HyperLink ID="lnkScreenshot" runat="server">
+                    <asp:Image ID="imgScreenshot" runat="server" />
+                </asp:HyperLink>
             </div>
         </div>
         
