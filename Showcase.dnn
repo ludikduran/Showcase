@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="Showcase" type="Module" version="00.00.03">
+    <package name="Showcase" type="Module" version="00.00.04">
       <friendlyName>Showcase</friendlyName>
       <description>LD2.Showcase module</description>
       <iconFile>Images/icon_extensions.gif</iconFile>

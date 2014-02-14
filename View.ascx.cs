@@ -55,10 +55,14 @@ namespace LD2.Showcase
             imgSS.ImageUrl = FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.ScreenshotID));  // Screenshot image
 
             // Screenshot HyperLink
+            /*
             int height = FileManager.Instance.GetFile(dataitem.ScreenshotID).Height;
             int width = FileManager.Instance.GetFile(dataitem.ScreenshotID).Width;
             string SSUrl = (Request.IsSecureConnection ? "https://" : "http://") + base.PortalAlias.HTTPAlias.ToString() + FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.ScreenshotID));
             lnkSS.NavigateUrl = UrlUtils.PopUpUrl(SSUrl, Control, PortalSettings, false, false, height + 20, width + 20, false, string.Empty);
+            */
+
+            createPopUp(lnkSS, dataitem);
 
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
@@ -76,6 +80,14 @@ namespace LD2.Showcase
                     ClientAPI.AddButtonConfirm(lnkDelete, Localization.GetString("ConfirmDelete", LocalResourceFile));
                 }
             }
+        }
+
+        private void createPopUp(HyperLink lnk, Item dataitem)
+        {
+            int height = FileManager.Instance.GetFile(dataitem.ScreenshotID).Height;
+            int width = FileManager.Instance.GetFile(dataitem.ScreenshotID).Width;
+            string SSUrl = (Request.IsSecureConnection ? "https://" : "http://") + base.PortalAlias.HTTPAlias.ToString() + FileManager.Instance.GetUrl(FileManager.Instance.GetFile(dataitem.ScreenshotID));
+            lnk.NavigateUrl = UrlUtils.PopUpUrl(SSUrl, Control, PortalSettings, false, false, height + 20, width + 20, true, string.Empty);
         }
 
         protected void rptContent_ItemCommand(object source, RepeaterCommandEventArgs e)

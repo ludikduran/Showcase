@@ -1,5 +1,7 @@
 .LD2_Showcase
 {
+    width: 700px;
+    margin: 0 auto;
 }
 
 .LD2_Logo
@@ -18,7 +20,7 @@
 {
 	margin: 0px 15px;
 	float: left;
-	width: 33%;
+	width: 350px;
 }
 
 .LD2_Title
@@ -33,15 +35,26 @@
     text-align: justify;
 }
 
+.LD2_Screenshot
+{
+    height: 145px;
+    width: 145px;
+    float: left;
+    border: 1px solid black;
+    position: relative;
+    top: 21px;
+    overflow: hidden;
+}
+
 .LD2_Screenshot img
 {
     width: 145px;
-    height: 145px;
-    margin-top: 21px;
+    padding-top: 21px;
 }
 
 .LD2_Showcase_pnlControls
 {
-    margin-top: 10px;
+    clear: both;
+    padding-top: 10px;
     margin-bottom: 50px;
 }
